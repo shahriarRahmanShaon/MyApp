@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
                     var celciousTemp = result.main.temp - 273.15
                     runOnUiThread {
                         // changing UI int he main thread
-                        text2.setText(String.format(Locale.US, "%.2f", celciousTemp))
+                        text2.setText(String.format(Locale.US, "%.2f", celciousTemp) + "°C")
                     }
 
                     getBackground(result.weather[0].icon) // calling getBackgroud function with icon parameter
