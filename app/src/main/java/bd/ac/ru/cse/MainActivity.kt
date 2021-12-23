@@ -19,6 +19,7 @@ import com.google.android.gms.location.LocationServices
 import com.google.gson.GsonBuilder
 import okhttp3.*
 import java.io.IOException
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -117,9 +118,11 @@ class MainActivity : AppCompatActivity() {
                     var gson = GsonBuilder().create() // build gson instance
                     var result =  gson.fromJson(getString, Welcome::class.java) // map the response into welcome.kt data class
                     Log.d("json", result.weather[0].id.toString()) // printing id of the json response to console for test
+                    // hold the temp in kelvin
+                    var celciousTemp = result.main.temp - 273.15
                     runOnUiThread {
                         // changing UI int he main thread
-                        text2.setText(result.main.temp.toString())
+                        text2.setText(String.format(Locale.US, "%.2f", celciousTemp))
                     }
 
                     getBackground(result.weather[0].icon) // calling getBackgroud function with icon parameter

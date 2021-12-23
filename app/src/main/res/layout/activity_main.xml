@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="251dp"
-        android:layout_height="124dp"
-        android:layout_marginBottom="208dp"
+        android:layout_width="229dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="184dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,6 +20,7 @@
         android:id="@+id/textView"
         android:layout_width="147dp"
         android:layout_height="59dp"
+        android:layout_marginTop="76dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="300dp"
-        android:layout_height="276dp"
+        android:layout_width="239dp"
+        android:layout_height="176dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
